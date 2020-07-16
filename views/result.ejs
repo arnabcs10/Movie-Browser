@@ -1,0 +1,58 @@
+
+
+<%- include("partials/header") %>
+<!-- =========================================================================================== -->
+    
+<%if(data.Response==="True"){%>
+<section class="container">
+   <div class="row my-4">
+       <div class="col-md-7">
+           <h5>
+               Showing results of <strong>"<%=searchKey %>"</strong>
+            </h5>
+       </div>
+   </div>
+
+   <div class="row text-center ">
+        
+            <% data.Search.forEach(function(movie){ %>
+                <div class="col-12 col-md-4 my-3">
+                    <a href="/view/<%=movie.imdbID %>">
+                        <div class="card mx-5" style="width: 18rem;">
+                            <img src="<%= movie.Poster %>" style="height:27rem;" class="card-img-top" alt="OOps Poster Not Found">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= movie.Title %></h5>
+                                <p class="card-text"><%= movie.Year %></p>
+                            </div>
+                        </div> 
+                    </a>     
+                </div>     
+            <% }) %>    
+    </div>
+
+</section><!-- container ends here-->
+        <% }else{ %>
+            <style>
+                .footer{
+                    position: fixed;
+                }
+            </style>
+    
+            <div class="row my-4 text-center">
+                <div class="col-md-7">
+                    <h5>
+                        Showing results of <strong>"<%=searchKey %>"</strong>
+                     </h5>
+                </div>
+            </div>
+            <div class="text-center error ">
+                OOPS!
+                <br>
+                Movies Not Found
+                <br>
+                <a href="/" type="button" class="btn btn-success">Go Back</a>
+            </div>
+<% } %>   
+   
+<!-- =========================================================================================== -->        
+<%- include("partials/footer") %>

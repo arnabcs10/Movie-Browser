@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<style>
+    .footer{
+        position: fixed;
+    }
+
+    .error{
+        padding-top:10vh;
+        font-weight: 500;
+        font-size: 3rem;
+        font-family: 'Balsamiq Sans', cursive;
+    }
+    
+    .not-found{
+        font-size: 1.5rem;
+    }
+    </style>
+
+<div class="text-center error ">
+    OOPS!
+    <br>
+   <span class="not-found"> Error 404:Page Not Found</span>
+    <br>
+    <a href="/" type="button" class="btn btn-success">Go Back</a>
+</div>
+
+<%- include("partials/footer") %>

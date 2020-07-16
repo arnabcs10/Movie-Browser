@@ -1,0 +1,91 @@
+
+<%- include("partials/header") %>
+<!-- =========================================================================================== -->
+<section class="jumbotron p-2 my-3 ">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-md-2">
+                    <img class="img-fluid" src="<%=data.Poster %>"  alt="...">
+                </div>
+
+                <div class="col-md-10 ">
+                    <h5><%=data.Title %></h5>
+                    <p >
+                        <%=data.Plot %>
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<div class="container">
+
+
+    <div class="row border-bottom data-row ">
+            <div class="col-2 pl-0">
+                <div class="item">Genre</div>
+            </div>
+            <div class="col-10">
+                <div><%=data.Genre %></div>
+            </div>
+        </div>
+
+        <div class="row border-bottom data-row">
+                <div class="col-2 pl-0">
+                    <div class="item">Year of Release</div>
+                </div>
+                <div class="col-10">
+                    <%=data.Year %>
+                </div>
+            </div>
+    <div class="row border-bottom data-row">
+        <div class="col-2 pl-0">
+            <div class="item">Language</div>
+        </div>
+        <div class="col-10">
+            <%=data.Language %>
+        </div>
+    </div>   
+    
+    <div class="row border-bottom data-row">
+            <div class="col-2 pl-0">
+                <div class="item">IMDB Rating</div>
+            </div>
+            <div class="col-10">
+                <%=data.imdbRating %>       
+            </div>
+        </div> 
+
+        <div class="row border-bottom data-row">
+                <div class="col-2 pl-0">
+                    <div class="item">Director</div>
+                </div>
+                <div class="col-10">
+                    <%=data.Director %>          
+                </div>
+            </div> 
+            <div class="row border-bottom data-row">
+                    <div class="col-2 pl-0">
+                        <div class="item">Cast</div>
+                    </div>
+                    <div class="col-10">
+                        <%=data.Actors %>
+                    </div>
+                </div>  
+                <div class="row border-bottom data-row">
+                        <div class="col-2 pl-0">
+                            <div class="item">Rated</div>
+                        </div>
+                        <div class="col-10">
+                            <%=data.Rated %>        
+                        </div>
+                    </div>             
+</div>
+
+
+
+
+
+
+<%- include("partials/footer") %>
+<!-- =========================================================================================== -->        
