@@ -1,4 +1,4 @@
-# Project Title
+# OMDB MOVIE-BROWSER
 
 This project provides a means of searching for and browsing movies
 using the OMDB API.
